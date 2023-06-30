@@ -64,7 +64,19 @@ class Operation extends Connect
          return false;
      }
     }
-
+    public function updateOData($where=null)  {
+        $tabel =$this->getTable();
+        $coloumns=$this->getFields();
+        $connect = new Connect();
+        $result=$connect->updateData($tabel,$coloumns,$where);
+        if($result){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
 
 }
 

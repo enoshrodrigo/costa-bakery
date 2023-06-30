@@ -14,8 +14,20 @@ if(isset($_POST['del_Ingredient']) && isset($_POST['ingredient_tabel_id'])){
         echo "failed";
     }
 }
-else{
-    echo "failed";
+else if (isset($_POST['ingredientvalueid']) && isset($_POST['price'])){
+    $ingredientvalueid=$_POST['ingredientvalueid'];
+    $price = $_POST['price'];
+    $edit_ingrident=new Operation;
+    $edit_ingrident->setTable('ingredientvalue');
+    $fields=["ingredientvalue_price = $price "];
+    $edit_ingrident->setFields($fields);
+    $result=$edit_ingrident->updateOData("ingredientvalue_id = $ingredientvalueid");
+    if($result){
+            
+    }else{
+        echo"error";
+    }
+     
 }
 
 ?>

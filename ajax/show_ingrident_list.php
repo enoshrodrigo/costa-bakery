@@ -32,7 +32,7 @@ if (isset($_POST['show_ingredient_list'])) {
                       <th>Ingredient price</th>
                       <th>Ingredient measure</th>
                       <th>Ingredient Add date</th>
-                      <th>Ingredient edit</th>
+                      <th>Ingredient Save</th>
                       <th>Ingredient delete</th>
                   </tr>
               </thead>
@@ -42,10 +42,10 @@ if (isset($_POST['show_ingredient_list'])) {
             foreach (getCategoryIngridentValue($ing['ingredientvalue_ingredient_id']) as $ingridentValue) {
 
                 echo '<tr>
-                  <td>Rs.' . $ingridentValue['ingredientvalue_price'] . '</td>
+                  <td><input type="number" id="'.$ingridentValue['ingredientvalue_id'].'" class="form-control" value=' . $ingridentValue['ingredientvalue_price'] . '></td>
                   <td>' . $ingridentValue['ingredientvalue_measure'] . '</td>
                   <td>' . $ingridentValue['ingredientvalue_date_start'] . '</td>
-                  <td><button class="btn btn-danger" id="Edit_ingredient" onclick="EditIngredient(' . $ingridentValue['ingredientvalue_id'] . ')">Edit</button></td>
+                  <td><button class="btn btn-danger" id="Edit_ingredient" onclick="EditIngredient(' . $ingridentValue['ingredientvalue_id'] . ')">Save</button></td>
                   <td><button class="btn btn-danger" id="delete_ingredient" onclick="DeleteIngredient(' . $ingridentValue['ingredientvalue_id'] . ',' . $ingridentValue['ingredientvalue_ingredient_id'] . ')">Delete</button></td>
                   </tr>';
             }

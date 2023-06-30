@@ -60,6 +60,23 @@ class Connect {
         return false;
         }
     }
+
+    public function updateData($tabel,$columns,$where=null)  {
+      $column=implode(" , ",$columns);
+      $sql="UPDATE `$tabel` SET ";
+      $sql = $sql.$column;
+      if($where!=null){
+        $sql=$sql." WHERE ".$where;
+      }
+
+      $query=$this->con->query($sql);
+      if($query){
+        return true;
+      }else{
+        return false;
+      }
+
+      
+    }
   
 }
-?>
