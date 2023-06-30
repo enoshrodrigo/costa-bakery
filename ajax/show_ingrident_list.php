@@ -45,7 +45,7 @@ if (isset($_POST['show_ingredient_list'])) {
                   <td><input type="number" id="'.$ingridentValue['ingredientvalue_id'].'" class="form-control" value=' . $ingridentValue['ingredientvalue_price'] . '></td>
                   <td>' . $ingridentValue['ingredientvalue_measure'] . '</td>
                   <td>' . $ingridentValue['ingredientvalue_date_start'] . '</td>
-                  <td><button class="btn btn-danger" id="Edit_ingredient" onclick="EditIngredient(' . $ingridentValue['ingredientvalue_id'] . ')">Save</button></td>
+                   <td><button class="btn btn-danger" id="Edit_ingredient" onclick="EditIngredient(' . $ingridentValue['ingredientvalue_id'] . ')">Save</button></td>
                   <td><button class="btn btn-danger" id="delete_ingredient" onclick="DeleteIngredient(' . $ingridentValue['ingredientvalue_id'] . ',' . $ingridentValue['ingredientvalue_ingredient_id'] . ')">Delete</button></td>
                   </tr>';
             }
