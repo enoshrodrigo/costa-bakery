@@ -62,7 +62,7 @@ class Connect {
     }
 
     public function updateData($tabel,$columns,$where=null)  {
-      $column=implode(" , ",$columns);
+       $column=implode(" , ",$columns);
       $sql="UPDATE `$tabel` SET ";
       $sql = $sql.$column;
       if($where!=null){
