@@ -12,7 +12,7 @@ function DeleteIngredient(id, ingredient_tabel_id) {
 }
 
 function EditIngredient(ingredientvalue_id) {
-    price = document.getElementById(""+ingredientvalue_id+"").value;
+     price = document.getElementById(""+ingredientvalue_id+"").value;
   $.ajax({
     url: "./opearations/delete_and_edit_ingrident.php",
     type: "POST",
