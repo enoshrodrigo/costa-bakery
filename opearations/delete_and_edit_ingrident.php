@@ -23,7 +23,7 @@ else if (isset($_POST['ingredientvalueid']) && isset($_POST['price'])){
     $edit_ingrident->setFields($fields);
     $result=$edit_ingrident->updateOData("ingredientvalue_id = $ingredientvalueid");
     if($result){
-            
+            echo true;
     }else{
         echo"error";
     }

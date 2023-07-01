@@ -1,4 +1,4 @@
-//delete ingredient from database when user clicks on delete button in ingredient list DeleteIngrident() function is called
+//delete ingredient from database when user clicks on delete button in ingredient list DeleteIngrident() function called
 
 function DeleteIngredient(id, ingredient_tabel_id) {
   $.ajax({
@@ -10,6 +10,7 @@ function DeleteIngredient(id, ingredient_tabel_id) {
     },
   });
 }
+//Edut ingredient from database when user clicks on save button in ingredient list EditIngredient() function called
 
 function EditIngredient(ingredientvalue_id) {
      price = document.getElementById(""+ingredientvalue_id+"").value;
@@ -20,5 +21,10 @@ function EditIngredient(ingredientvalue_id) {
       ingredientvalueid:ingredientvalue_id,
       price:price,
     },
+    success:(data)=>{
+      if(data){
+        alert('Succesfully updated');
+      }
+    }
   });
 }
