@@ -36,6 +36,7 @@ class Connect {
         $sql .= " WHERE $where";
         }
         $query = $this->con->query($sql);
+        
         if ($query->num_rows > 0) {
           while ($row = $query->fetch_assoc()) {
             $data[] = $row;

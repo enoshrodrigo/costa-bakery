@@ -64,18 +64,7 @@
                                                          </select>
                                                      </div>
                                                  </div>
-                                                 <!-- <div class="col-md-6">
-                                                    <div class="mb-3"><label class="form-label" for="ingredientvalue_date_start">Ingrident date start</label><input class="form-control" type="date" id="ingredientvalue_date_start" name="ingredientvalue_date_start" max="<?php //echo date('Y-m-d'); 
-                                                                                                                                                                                                                                                                            ?>" required></div>
-                                                </div> -->
-
-
-
-
-                                                 <!-- <div class="col-md-6">
-                                                    <div class="mb-3"><label class="form-label" for="ingredientvalue_date_end">Ingrident date end</label><input class="form-control" type="date" id="ingredientvalue_date_end" name="ingredientvalue_date_end" max="<?php // echo date('Y-m-d'); 
-                                                                                                                                                                                                                                                                    ?>" required></div>
-                                                </div> -->
+                                              
                                                  <div class="col-md-6">
                                                      <div class="mb-3"> <input class="form-control  " style="margin-top: 4.5rem; float:right;" type="submit" id="addIngrident" name="submit" required></div>
                                                  </div>
