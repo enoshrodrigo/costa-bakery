@@ -49,21 +49,15 @@
 
                                 <div class="d-flex justify-content-md-between " id="ingridents">
 
-                                    <div class="w-50  m-2"><label class="form-label" for="ingredient_value">Ingrident value</label><input class="form-control" type="number" step="any" id="ingredient_value" name="ingredient_value[]" required></div>
+                                    <div class="w-50  m-2"><label class="form-label" for="ingredient_value">Ingrident value</label></div>
 
 
                                     <div class="w-50 m-2"><label class="form-label" for="food_measure">Food measure</label>
-                                        <select class="form-control" id="food_measure" name="food_measure[]" required>
-                                            <option value="gram" >gram</option>
-                                            <option value="ml">ml</option>
-                                            <option value="pcs">pcs</option>
-                                        </select>
+                                         
                                     </div>
 
                                     <div class="w-50 m-2"><label class="form-label" for="ingredient_name">Ingrident name</label>
-                                        <select type="text" class="form-control" id="ingredient_name" name="ingredient_name[]" required>
-
-                                        </select>
+                                        
 
                                     </div>
 
