@@ -33,8 +33,8 @@
 
                         <div class="card-body">
                             <!-- get food name , how many valume need, display which messure(gram,ml,pcs) , from ingredientvalue and display ingrident name from ingredient tabelalso when i click it i need to add another ingrident to food. after when click submit i need to save these things in tabel, also need input field to add price-->
-                            <form action="./opearations/add_foods_database.php" method="post">
-                                <div class="row">
+                            <form action="./opearations/add_foods_database.php" method="post" id="parentClass">
+                                <div class="row" >
                                     <div class="col-md-6">
                                         <div class="mb-3"><label class="form-label" for="food_name">Food name</label><input class="form-control" type="text" id="food_name" name="food_name" required>
                                             <div id="error_food_name"></div>
@@ -53,7 +53,7 @@
 
 
                                     <div class="w-50 m-2"><label class="form-label" for="food_measure">Food measure</label>
-                                        <select class="form-control" id="food_measure" name="food_measure" required>
+                                        <select class="form-control" id="food_measure" name="food_measure[]" required>
                                             <option value="gram" >gram</option>
                                             <option value="ml">ml</option>
                                             <option value="pcs">pcs</option>
@@ -61,7 +61,7 @@
                                     </div>
 
                                     <div class="w-50 m-2"><label class="form-label" for="ingredient_name">Ingrident name</label>
-                                        <select class="form-control" id="ingredient_name" name="ingredient_name[]" required>
+                                        <select type="text" class="form-control" id="ingredient_name" name="ingredient_name[]" required>
 
                                         </select>
 
