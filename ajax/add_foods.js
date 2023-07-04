@@ -10,11 +10,13 @@ function getDataFromDataBase(returnData) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  getDataFromDataBase((result) => {});
+  // getDataFromDataBase((result) => {});
+  document.getElementById("submit").disabled=true;
 });
 var price = 0;
 var total = 0;
 document.getElementById("addIngrident").addEventListener("click", () => {
+  document.getElementById("submit").disabled=false;
   getDataFromDataBase((result) => {
     console.log(result);
     var div = document.createElement("div");
@@ -43,7 +45,7 @@ document.getElementById("addIngrident").addEventListener("click", () => {
     ingMeasure.name = "food_measure[]";
     ingMeasure.className = "form-control w-50 m-2";
     ingMeasure.readOnly = true;
-
+    ingMeasure.required=true;
     var ingName = document.createElement("select");
     ingName.name = "ingredient_name[]";
     ingName.className = "form-control w-50 m-2";
