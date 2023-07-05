@@ -14,12 +14,27 @@ function displayFoods() {
     url: "./ajax/show_foods_list.php",
     method: "POST",
     data: {
-
+        getFood:true,
     },
     success: (data) => {
       $("#food_list").html(data);
     },
   });
+}
+
+function deleteFood(id){
+$.ajax({
+    url: "./ajax/delete_food.php",
+    method: "POST",
+    data: {
+        deleteFood:id,
+    },
+    success: (data) => {
+        displayFoods();
+    }
+  });
+
+ 
 }
 
 document.addEventListener("DOMContentLoaded", () => {

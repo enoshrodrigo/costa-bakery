@@ -1,6 +1,7 @@
 <?php
 include_once("../opearations/operation.php");
-if (true) {
+if (isset($_POST['getFood'])) {
+
 
     $show_food = new Operation();
     $show_food->setTable('food');
@@ -14,11 +15,13 @@ if (true) {
         $idCount = 0;
 
         foreach ($food as $foodList) {
+            $total=0;
             $idCount++;
             echo '
            <div class="mb-3">
-           <div class="form-control" type="text" data-bs-toggle="collapse" data-bs-target="#collapseIngrident2' . $idCount . '" aria-expanded="false" aria-controls="collapseExample" style="cursor: pointer">
+           <div class="form-control d-flex justify-content-md-between" type="text" data-bs-toggle="collapse" data-bs-target="#collapseIngrident2' . $idCount . '" aria-expanded="false" aria-controls="collapseExample" style="cursor: pointer">
                <label for="food_name">' . $foodList['food_name'] . '</label>
+               <label for="food_price" class="text-dark mx-2">Rs.' . $foodList['food_price'] . '</label>
            </div>
   
            <!-- make form to display -->
@@ -43,18 +46,37 @@ if (true) {
             foreach (getCategoryIngridentValue($foodList['food_id']) as $foodListridentValue ) {
                 // var_dump(getCategoryIngridentValue(40)); 
                 $foodListridentValue['ingredientvalue_measure']!='pcs'?$realPrice=$foodListridentValue['food_value_volume']*($foodListridentValue['ingredientvalue_price']/1000):$realPrice=$foodListridentValue['food_value_volume']*($foodListridentValue['ingredientvalue_price']);
+                if($foodListridentValue['food_value_volume']==0){
+                            continue;
+                }
                 echo '<tr>
                 <td>' . $foodListridentValue['ingredient_name'] . '</td>
                   <td>' . $foodListridentValue['food_value_volume'] . '</td>
                   <td>' . $foodListridentValue['ingredientvalue_measure'] . '</td>
                   <td>' . $realPrice . '</td>
                   <td>' . $foodListridentValue['ingredientvalue_price'] . '</td>
-
-                  
+ 
                   </tr>';
+            $total=$total+$realPrice;
             }
 
-            echo '</tbody> </table>
+            echo '
+            <tr>
+            <td colspan=6>
+            <div>Total real cost</div>
+             <div> RS '.$total.'  </div>
+            </td>
+                               
+            </tr>
+            <tr>
+            <td colspan=6>
+         <button class=" btn btn-danger float-end" onclick="deleteFood('.$foodList['food_id'].')">
+         Delete Food
+         </button>
+            </td>
+                               
+            </tr>
+            </tbody> </table>
               </div>
               
               
