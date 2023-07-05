@@ -69,6 +69,14 @@
                                 </div>
                                 <button class="btn btn-primary" id="submit" type="submit">submit</button>
                             </form>
+                            <br>
+                            <div class="row">
+                                 <!-- make rows for display data from ingredient and ingredientvalue then display with edit delete and add date ranges,price buttons for each row -->
+                                 <div class="col-md-12" id="food_list">
+
+                                     <!-- Display ing data -->
+                                 </div>
+                             </div>
 
                         </div>
                     </div>

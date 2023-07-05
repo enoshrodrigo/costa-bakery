@@ -9,8 +9,21 @@ function getDataFromDataBase(returnData) {
   });
 }
 
+function displayFoods() {
+  $.ajax({
+    url: "./ajax/show_foods_list.php",
+    method: "POST",
+    data: {
+
+    },
+    success: (data) => {
+      $("#food_list").html(data);
+    },
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  // getDataFromDataBase((result) => {});
+  displayFoods();
   document.getElementById("submit").disabled=true;
 });
 var price = 0;
