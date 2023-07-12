@@ -1,7 +1,7 @@
 # costa-bakery
 **Costa Bakery Real Cost Calculator and Billing System**
 
-Description: This project is a web-based application designed to assist Costa Bakery in calculating the real cost of their
+Description: This project is a web-based application designed to assist Costa Bakery in Kadawala Katana. Calculating the real cost of their
 food products based on ingredient prices. It allows users to add ingredients along with their respective prices for 1 kg, 1 piece, or 1 liter.
 The system dynamically calculates the real cost of food items as ingredients are added, providing live updates. The application is built using PHP, JavaScript, Bootstrap, HTML, CSS, and MySQL.
 
