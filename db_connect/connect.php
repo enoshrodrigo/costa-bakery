@@ -21,6 +21,9 @@ class Connect {
         $col = implode(",", array_keys($fields));
         $row = implode("','", array_values($fields));
         $sql = "INSERT INTO $table ($col) VALUES ('$row')";
+        if(preg_match('[@_!#$%^&*()<>?/|}{~:]',$sql)){
+          return false;
+        }
         $query = $this->con->query($sql);
         if ($query) {
         return true;
@@ -34,6 +37,9 @@ class Connect {
         $sql = "SELECT $area FROM $table";
         if ($where != null) {
         $sql .= " WHERE $where";
+        }
+        if(preg_match('[@_!#$%^&*()<>?/|}{~:]',$sql)){
+          return false;
         }
         $query = $this->con->query($sql);
         
