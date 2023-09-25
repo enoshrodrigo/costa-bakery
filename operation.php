@@ -21,10 +21,10 @@
                 <?php include './panels/navigation.php'; ?>
 
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4">Dashboard</h3>
+                    <h3 class="text-dark mb-4">Controls</h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 fw-bold">Dashboard of bakery</p>
+                            <p class="text-primary m-0 fw-bold">Operations of bakery</p>
                         </div>
                         <div class="card-body">
                              <h1 class="text-center">This page comming soon</h1>

@@ -1,9 +1,4 @@
 <?php
-session_start();
-if (!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true) {
-    header("location: login.php");
-    exit;
-}
 include_once '../db_connect/connect.php';
 
 class Operation extends Connect

@@ -1,5 +1,5 @@
 
 <?php
-header("Location:./login.php");
+header("Location:./add_foods.php");
 exit(); 
 ?>
